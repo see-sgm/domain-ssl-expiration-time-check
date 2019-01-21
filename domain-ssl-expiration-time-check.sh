@@ -3,7 +3,7 @@ for Domain in `cat list.txt`
 do 
   Port_List=`nmap  -Pn $Domain |grep -w "open" |awk -F'/' '{print $1}'` 
   echo "--- $Domain ---" | tee >> $log 
-  echo "open port: $Port_list" | tee >> $log  
+  echo "open port: `echo $Port_List`" | tee >> $log  
   for Port in $Port_List 
   do 
     Info=`openssl s_client -servername $Domain -connect $Domain:$Port < /dev/null | openssl x509 -noout -dates -subject` 

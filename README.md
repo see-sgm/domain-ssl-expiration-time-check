@@ -23,7 +23,7 @@ $ sh domain-ssl-expiration-time-check.sh
 ```
 $ cat info.log
 --- www.baidu.com ---
-open port: 
+open port: 80 443
 Port 80 SSL is not enabled
 Port 443 SSL is enabled
   www.baidu.com:443 SSL domain: CN/ST
