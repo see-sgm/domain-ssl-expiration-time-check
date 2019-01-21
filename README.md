@@ -34,7 +34,7 @@ $ cat info.log
 open port: 80 443
 Port 80 SSL is not enabled
 Port 443 SSL is enabled
-  www.baidu.com:443 SSL domain: CN/ST
+  www.baidu.com:443 SSL domain: baidu.com
   www.baidu.com:443 SSL StartTime: 2018-04-03
   www.baidu.com:443 SSL EndTime: 2019-05-26
 ```
