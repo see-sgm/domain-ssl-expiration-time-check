@@ -19,7 +19,7 @@ do
 
     StartTime=`echo $Info| awk -F'=' '{print $2}'|awk '{$NF="";print $0}'|xargs -I {} date '+%Y-%m-%d' --date {}`  
     EndTime=`echo $Info | awk -F'=' '{print $3}'|awk '{$NF="";print $0}'| xargs -I {} date '+%Y-%m-%d' --date {}`  
-    Domain_Name=`echo $Info | awk -F'=' '{print $5}'`
+    Domain_Name=`echo $Info | awk -F'=' '{print $NF}'`
     echo "  $Domain:$Port SSL domain: $Domain_Name" | tee >> $log 
     echo "  $Domain:$Port SSL StartTime: $StartTime" | tee >> $log   
     echo "  $Domain:$Port SSL EndTime: $EndTime" | tee >> $log   
